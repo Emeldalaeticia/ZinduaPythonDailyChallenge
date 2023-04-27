@@ -1,8 +1,9 @@
-numbers = [ 1, 2, 3, 4, 6]
+#The program prints the prime numbers between 0 to 1000
 
-total = 0
-for num in numbers:
-    if num % 2 == 0 : 
-        total += num
-print(total)
-    
+for num in range(1000):
+    if num > 1:
+        for i in range (2, num):
+            if (num % i) == 0:
+               break
+        else:
+                print(num)
