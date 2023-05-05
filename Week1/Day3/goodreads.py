@@ -51,7 +51,7 @@ def main():
                 for book in result:
                     print(f"{book['title']} by {book['author']}, ISBN: {book['ISBN']}, Price: {book['price']}")
         elif choice == '2':
-            isbn = input('Enter ISBN: ')
+            isbn = int(input('Enter ISBN: '))
             result = search_by_isbn(books, isbn)
             if result is None:
                 print('Book not found')
