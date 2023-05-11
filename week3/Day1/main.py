@@ -16,6 +16,7 @@ class InventoryManagementSystem:
     def add_item(self, name, quantity, price):
         item = InventoryItem(name, quantity, price)
         self.items.append(item)
+        print(self.items)
 
     def remove_item(self, name):
         for item in self.items:
