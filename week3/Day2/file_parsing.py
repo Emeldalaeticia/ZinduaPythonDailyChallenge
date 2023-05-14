@@ -1,3 +1,6 @@
+import json
+
+
 def parse_file(file_path):
     with open(file_path) as file:
         file_contents = file.read()
@@ -15,6 +18,10 @@ def parse_file(file_path):
 
     return address_book
 
-file_path ="name_address.txt"
+
+file_path = "name_address.txt"
 address_book = parse_file(file_path)
 print(address_book)
+
+json_object = json.dumps(address_book, indent=4)
+print(json_object)
