@@ -1,6 +1,6 @@
 phonebook = {}
 
-def add_contact():
+def add_contact(phonebook):
     name = input("Enter contact name: ")
     phone = input("Enter contact phone number: ")
     if name in phonebook:
@@ -10,7 +10,7 @@ def add_contact():
         print("Contact added successfully.")
 
 
-def delete_contact():
+def delete_contact(phonebook):
     name = input("Enter contact name: ")
     if name in phonebook:
         del phonebook[name]
@@ -19,7 +19,7 @@ def delete_contact():
         print("Contact not found.")
 
 
-def search_contact():
+def search_contact(phonebook):
     name = input("Enter contact name: ")
     if name in phonebook:
         print(f"{name}: {phonebook[name]}")
@@ -27,7 +27,7 @@ def search_contact():
         print("Contact not found.")
 
 
-def print_contacts():
+def print_contacts(phonebook):
     if phonebook:
         print("Contacts:")
         for name, phone in phonebook.items():
@@ -46,13 +46,13 @@ while True:
     
     choice = input("Enter your choice (1-5): ")
     if choice == "1":
-        add_contact()
+        add_contact(phonebook)
     elif choice == "2":
-        delete_contact()
+        delete_contact(phonebook)
     elif choice == "3":
-        search_contact()
+        search_contact(phonebook)
     elif choice == "4":
-        print_contacts()
+        print_contacts(phonebook)
     elif choice == "5":
         break
     else:
